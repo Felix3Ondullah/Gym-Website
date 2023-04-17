@@ -10,6 +10,7 @@ const HeroBanner = () => (
       justifyContent: "flex-end",
       mt: { lg: "100px", xs: "50px" },
       mr: { sm: "50px" },
+      ml: { sm: "50px" }
     }}
     position="relative"
     p="20px"
@@ -50,12 +51,14 @@ const HeroBanner = () => (
         </a>
       </Stack>
     </Box>
-    <img
-      src={HeroBannerImage}
-      alt="hero-banner"
-      className="hero-banner-img"
-      style={{ width: "50%" }}
-    />
+    <Box sx={{ width: "50%", marginLeft: "auto", position: "relative" }}>
+      <img
+        src={HeroBannerImage}
+        alt="hero-banner"
+        className="hero-banner-img"
+        style={{ width: "90%", marginTop: -170 }}
+      />
+    </Box>
   </Box>
 );
 
