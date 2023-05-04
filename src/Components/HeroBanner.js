@@ -6,16 +6,19 @@ import HeroBannerImage from "../assets/images/banner.png";
 const HeroBanner = () => (
   <Box
     sx={{
+      mt: { lg: "70px", xs: "0px" },
+      ml: { sm: "50px" },
       display: "flex",
-      justifyContent: "flex-end",
-      mt: { lg: "100px", xs: "50px" },
-      mr: { sm: "50px" },
-      ml: { sm: "50px" }
+      flexDirection: { xs: "column-reverse", lg: "row" },
+      alignItems: { lg: "center" },
+      justifyContent: { lg: "space-between" },
+      maxWidth: { lg: "1200px", xl: "1400px" },
+      margin: "auto",
+      position: "relative",
     }}
-    position="relative"
     p="20px"
   >
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flex: { xs: "1 1 100%", lg: "0 1 50%" } }}>
       <Typography color="#FF2625" fontWeight="600" fontSize="26px">
         Fitness Club
       </Typography>
@@ -50,13 +53,36 @@ const HeroBanner = () => (
           Explore Exercises
         </a>
       </Stack>
+      <Typography
+        fontWeight={600}
+        color="#FF2625"
+        sx={{
+          opacity: "0.1",
+          display: { lg: "block", xs: "none" },
+          fontSize: "200px",
+        }}
+      >
+        Exercise
+      </Typography>
     </Box>
-    <Box sx={{ width: "50%", marginLeft: "auto", position: "relative" }}>
+    <Box
+      sx={{
+        flex: { xs: "1 1 100%", lg: "0 1 50%" },
+        textAlign: "right",
+        position: { lg: "absolute" },
+        bottom: { lg: 0, xs: "-50px" },
+        right: { lg: "100px", xs: 0 },
+      }}
+    >
       <img
         src={HeroBannerImage}
         alt="hero-banner"
         className="hero-banner-img"
-        style={{ width: "90%", marginTop: -170 }}
+        style={{
+          maxWidth: "100%",
+          maxHeight: "110vh",
+          margin: "5 5 5 45px",
+        }}
       />
     </Box>
   </Box>
